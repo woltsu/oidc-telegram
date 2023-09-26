@@ -1,5 +1,12 @@
 import axios from "axios";
 import { config } from "./config";
+import z from "zod";
+
+const telegramResponseSchema = z.object({
+  result: z.object({
+    invite_link: z.string(),
+  }),
+});
 
 export const getUniqueJoinLink = async () => {
   const result = await axios.post(
@@ -11,6 +18,6 @@ export const getUniqueJoinLink = async () => {
     }
   );
 
-  // TODO: Parse with zod
-  return result.data.result.invite_link;
+  const parsedResult = telegramResponseSchema.parse(result.data);
+  return parsedResult.result.invite_link;
 };

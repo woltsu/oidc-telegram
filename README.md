@@ -2,7 +2,7 @@
 
 Make a Telegram channel joinable using OIDC authentication!
 
-When navigating to the root of the application, the app will first make sure that the user is authenticated as per the OIDC configuration. Then, it will generate an unique Telegram channel invite link (that is usable once and expires in 1 hour), to which it will automatically redirect the user.
+When navigating to the root of the application, the app will first make sure that the user is authenticated as per the OIDC configuration. Then, it will generate a unique Telegram channel invite link (that is usable once and expires in 1 hour), to which it will automatically redirect the user.
 
 ## Environment Configuration
 

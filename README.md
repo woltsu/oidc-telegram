@@ -6,7 +6,7 @@ When navigating to the root of the application, the app will first make sure tha
 
 ## Environment Configuration
 
-The application expects the following environmental variables:
+The application expects the following environment variables:
 
 - `SESSION_SECRET`, some long random string for securing session token
 - `BASE_URL`, the base url where the app is running
